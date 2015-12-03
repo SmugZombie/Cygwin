@@ -7,10 +7,6 @@ if [ -f ~/.scripts/welcome.sh ]; then
 fi
 
 export PATH=$PATH:.:~/bin
-# USER=$(id -G | grep -qE '\<(544|0)\>' && echo root || echo $USER)
-# PS1="\[\e[1;32m\]["$USER"@\h \W]\$\[\e[0m\] "
-
-export PATH=$PATH:.:~/bin
 
 USER=$(id -G | grep -qE '\<(544|0)\>' && echo root || echo $USER)
 
