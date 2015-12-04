@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# welcome.sh
+# Written by Ron Egli
+# github.com/smugzombie
+
 function getExternalIP {
         externalIP=$(curl -s http://digdns.com/ip/?mode=quick)
 }
@@ -25,11 +29,8 @@ function getDimensions {
 }
 
 function getStats {
-        #memory=$(cat /proc/meminfo | head -n 2)
         totalMemory=$(cat /proc/meminfo | head -n 2 | awk {'print $2'} | head -n 1 )
         totalMemoryGB=$(echo $(($totalMemory / 1000000)) )
-        #echo $totalMemoryGB
-        #loadAverage=$(cat /proc/loadavg)
 }
 
 function getUser {
