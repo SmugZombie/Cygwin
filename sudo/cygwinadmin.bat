@@ -1,5 +1,9 @@
 @echo off
 
+REM --> cygwinadmin.bat
+REM --> github.com/smugzombie
+REM --> Make sure you set the proper location to your cygwin installation at the bottom of this script, as mine is located in A, we change the drive to A, then access the appropriate files.
+
 :: BatchGotAdmin
 :-------------------------------------
 REM  --> Check for permissions
@@ -24,8 +28,6 @@ if '%errorlevel%' NEQ '0' (
     pushd "%CD%"
     CD /D "%~dp0"
 :--------------------------------------
-
-# This is where you set the proper location to your cygwin installation, as mine is located in A, we change the drive to A, then access the appropriate files.
 
 @A:\
 @A:\bin\mintty.exe -i /Cygwin-Terminal.ico -
